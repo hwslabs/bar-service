@@ -1,0 +1,6 @@
+[submodule "bar-service-kotlin-server"]
+	path = bar-service-kotlin-server
+	url = git@github.com:hwslabs/bar-service-kotlin-server.git
+[submodule "bar-service-kotlin-client"]
+	path = bar-service-kotlin-client
+	url = git@github.com:hwslabs/bar-service-kotlin-client.git
