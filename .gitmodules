@@ -1,6 +1,7 @@
 [submodule "bar-service-kotlin-server"]
 	path = bar-service-kotlin-server
 	url = git@github.com:logeshdinahypto/bar-service-kotlin-server.git
+	branch = development
 [submodule "bar-service-kotlin-client"]
 	path = bar-service-kotlin-client
 	url = git@github.com:logeshdinahypto/bar-service-kotlin-client.git
