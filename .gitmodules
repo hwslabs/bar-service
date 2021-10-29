@@ -1,5 +1,5 @@
-[submodule "starter-service-kotlin-server"]
-	path = starter-service-kotlin-server
+[submodule "starter-service-server"]
+	path = starter-service-server
 	url = git@github.com:logeshdinahypto/bar-service-kotlin-server.git
 [submodule "starter-service-client"]
 	path = starter-service-client
