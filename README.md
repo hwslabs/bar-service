@@ -18,14 +18,27 @@ The Bar service allows customers to order drinks and pay bills.
 The starter sources are organized into the following top-level folders:
 
 - [bar-service-kotlin-server](bar-service-kotlin-server): Server that runs on a Kotlin coroutine inside a docker container.
+- [bar-service-infrastructure](bar-service-infrastructure): Infrastructure-as-code to deploy and run server remotely on AWS.
 - [bar-service-kotlin-client](bar-service-kotlin-client): Client that runs on a Kotlin coroutine
 
 ## Run the server client pair on macOS
+- <details>
+  <summary>Create ECR repo</summary>
+
+  Follow the README in [bar-service-infrastructure](bar-service-infrastructure) until the step to deploy
+  an ECR repository into your AWS account.
 
 - <details>
-  <summary>Run the Server</summary>
+  <summary>Build the Server</summary>
 
-  Follow the README in [bar-service-kotlin-server](bar-service-kotlin-server) to run the server
+  Follow the README in [bar-service-kotlin-server](bar-service-kotlin-server) to build and push the server
+  to the remote ECR repository created in the previous step.
+
+  - <details>
+    <summary>Deploy the server</summary>
+
+    Resume the README in [bar-service-infrastructure](bar-service-infrastructure) to run the step that deploys
+    the service with all of its dependencies into your AWS account.
 
 - <details>
   <summary>Run the Client</summary>
