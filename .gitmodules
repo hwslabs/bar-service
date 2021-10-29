@@ -1,6 +1,6 @@
 [submodule "starter-service-server"]
 	path = starter-service-server
-	url = git@github.com:logeshdinahypto/bar-service-kotlin-server.git
+	url = git@github.com:logeshdinahypto/starter-service-server.git
 [submodule "starter-service-client"]
 	path = starter-service-client
-	url = git@github.com:logeshdinahypto/bar-service-kotlin-client.git
+	url = git@github.com:logeshdinahypto/starter-service-client.git
