@@ -1,9 +1,9 @@
-[submodule "bar-service-kotlin-server"]
-	path = bar-service-kotlin-server
-	url = git@github.com:hwslabs/bar-service-kotlin-server.git
-[submodule "bar-service-kotlin-client"]
-	path = bar-service-kotlin-client
-	url = git@github.com:hwslabs/bar-service-kotlin-client.git
-[submodule "bar-service-infrastructure"]
-	path = bar-service-infrastructure
-	url = git@github.com:hwslabs/bar-service-infrastructure.git
+[submodule "starter-service-server"]
+	path = starter-service-server
+	url = git@github.com:logeshdinahypto/starter-service-server.git
+[submodule "starter-service-client"]
+	path = starter-service-client
+	url = git@github.com:logeshdinahypto/starter-service-client.git
+[submodule "starter-service-infrastructure"]
+	path = starter-service-infrastructure
+	url = git@github.com:logeshdinahypto/starter-service-infrastructure.git
