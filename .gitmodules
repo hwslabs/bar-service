@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 [submodule "starter-service-server"]
 	path = starter-service-server
 	url = git@github.com:logeshdinahypto/starter-service-server.git
 [submodule "starter-service-client"]
 	path = starter-service-client
 	url = git@github.com:logeshdinahypto/starter-service-client.git
+[submodule "bar-service-infrastructure"]
+	path = bar-service-infrastructure
+	url = git@github.com:hwslabs/bar-service-infrastructure.git
