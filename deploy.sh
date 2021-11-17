@@ -31,6 +31,11 @@ createSecretIfNotExists() {
     fi
 }
 
+importSecretToCodeBuild() {
+    echo "Importing github oauth token into codebuild..."
+    aws codebuild import-source-credentials --server-type GITHUB --auth-type PERSONAL_ACCESS_TOKEN --token $1
+}
+
 addOrUpdateParameter /code-pipeline/notifications/email/primary-email "Email address for primary recipient of Pipeline notifications" $PRIMARY_EMAIL_ADDRESS
 
 addOrUpdateParameter /code-pipeline/builder/github/user "Github user to be used for building the code in the pipeline" $GITHUB_USER
@@ -39,8 +44,6 @@ addOrUpdateParameter /code-pipeline/sources/github/repo "Github repository name 
 
 addOrUpdateParameter /code-pipeline/sources/github/branch "Github branch name that contains the build sources for the pipeline" $GITHUB_BRANCH
 
-createSecretIfNotExists /code-pipeline/builder/github/oauth-token "OAuth token to use for Github API access in the pipeline" $GITHUB_TOKEN
+addOrUpdateParameter /code-pipeline/notifications/slack/workspace-id "Slack workspace ID to receive Pipeline state change notifications" $SLACK_WORKSPACE_ID
 
-createSecretIfNotExists /code-pipeline/builder/github/ssh-private-key "Base64 encoded Github SSH private key to use during install phase of the build" $GITHUB_SSH_PRIVATE_KEY_BASE64
-
-createSecretIfNotExists /code-pipeline/builder/github/ssh-public-key "Github SSH public key to use during install phase of the build" $GITHUB_SSH_PUBLIC_KEY
+addOrUpdateParameter /code-pipeline/notifications/slack/channel-id "Slack channel ID to receive Pipeline state change notifications" $SLACK_CHANNEL_ID
