@@ -47,3 +47,11 @@ addOrUpdateParameter /code-pipeline/sources/github/branch "Github branch name th
 addOrUpdateParameter /code-pipeline/notifications/slack/workspace-id "Slack workspace ID to receive Pipeline state change notifications" $SLACK_WORKSPACE_ID
 
 addOrUpdateParameter /code-pipeline/notifications/slack/channel-id "Slack channel ID to receive Pipeline state change notifications" $SLACK_CHANNEL_ID
+
+echo "Initializing the infrastructure project..."
+pushd bar-service-infrastructure
+npm install
+
+echo "Deploying the infrastructure to AWS..."
+npm run cdk deploy
+popd
